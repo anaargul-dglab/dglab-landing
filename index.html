@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DGLab — IA, Bots y Growth</title>
+  <meta name="description" content="DGLab: automatización de conversaciones con IA, bots de WhatsApp Business, IVR inteligente y marketing de crecimiento." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#0B0B0B',
+              text: '#E8E6E3',
+              gold: '#C7A042',
+              goldLight: '#E2C574',
+              goldDark: '#8C6A1F',
+              muted: '#B9B6AE'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif']
+          },
+          boxShadow: {
+            glow: '0 0 40px rgba(199,160,66,0.35)'
+          },
+          letterSpacing: {
+            wide2: '0.075em'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    html, body { scroll-behavior: smooth; }
+    .grit { background-image: radial-gradient(ellipse at 50% 0%, rgba(199,160,66,0.18), rgba(199,160,66,0.0) 45%), radial-gradient(ellipse at 10% 90%, rgba(226,197,116,0.12), rgba(226,197,116,0.0) 40%); }
+    .soft-border { border: 1px solid rgba(255,255,255,0.08); }
+    .fade-in { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
+    .fade-in.appear { opacity: 1; transform: none; }
+  </style>
+</head>
+<body class="bg-brand-bg text-brand-text font-sans antialiased">
+  <!-- Nav -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-black/40 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3">
+        <img src="./assets/logo.svg" alt="DGLab" class="h-8 w-auto">
+        <span class="font-extrabold tracking-wide2 uppercase">DGLab</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm">
+        <a href="#servicios" class="hover:text-brand-gold">Servicios</a>
+        <a href="#showcase" class="hover:text-brand-gold">Showcase</a>
+        <a href="#proceso" class="hover:text-brand-gold">Proceso</a>
+        <a href="#contacto" class="hover:text-brand-gold">Contacto</a>
+      </nav>
+      <a href="#contacto" class="rounded-2xl px-4 py-2 bg-brand-gold text-black font-semibold shadow-glow hover:opacity-90 transition">Solicitar demo</a>
+    </div>
+  </header>
+
+  <!-- Hero editorial -->
+  <section id="home" class="pt-28 md:pt-40 pb-16 md:pb-24 relative overflow-hidden grit">
+    <div class="absolute -top-40 -left-40 w-[36rem] h-[36rem] rounded-full blur-3xl opacity-20" style="background: radial-gradient(circle, #C7A042 0%, transparent 60%)"></div>
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="max-w-4xl fade-in">
+        <p class="uppercase tracking-widest text-xs md:text-sm text-brand-muted">IA conversacional • Growth • Automations</p>
+        <h1 class="mt-4 text-5xl md:text-7xl font-extrabold leading-[1.05]">
+          Conversaciones que <span class="text-brand-gold">convierten</span>. <br class="hidden md:block"/> Bots de WhatsApp, IVR con IA y marketing que acelera tus ventas.
+        </h1>
+        <p class="mt-6 text-lg md:text-xl opacity-90 max-w-3xl">
+          DGLab diseña y orquesta experiencias conversacionales 24/7. Integramos WhatsApp Business API, contestadoras inteligentes y embudos con analítica para que cada interacción sume.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="https://wa.me/5490000000000?text=Hola%20DGLab%2C%20quiero%20una%20demo" class="inline-flex items-center rounded-xl px-6 py-3 bg-brand-gold text-black font-semibold shadow-glow hover:opacity-90">Hablar por WhatsApp</a>
+          <a href="#servicios" class="inline-flex items-center rounded-xl px-6 py-3 border soft-border hover:border-brand-gold">Ver servicios</a>
+        </div>
+        <div class="mt-8 flex items-center gap-6 opacity-70 text-sm">
+          <span>⚡ Respuesta en minutos</span>
+          <span>🔒 API oficial</span>
+          <span>📈 Dashboards de conversión</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios grandes -->
+  <section id="servicios" class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-5xl font-extrabold fade-in">Servicios</h2>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="rounded-3xl soft-border p-8 bg-white/5 hover:bg-white/[0.08] transition fade-in">
+          <div class="text-4xl">💬</div>
+          <h3 class="mt-4 text-2xl font-bold">Bots WhatsApp Business</h3>
+          <p class="mt-2 opacity-85">Flujos de venta y soporte 24/7, plantillas, integración CRM/Sheets y derivación a agentes.</p>
+          <ul class="mt-4 space-y-2 opacity-90 text-sm">
+            <li>• Onboarding express</li>
+            <li>• Catálogos + pagos</li>
+            <li>• Segmentación y campañas</li>
+          </ul>
+        </div>
+        <div class="rounded-3xl soft-border p-8 bg-white/5 hover:bg-white/[0.08] transition fade-in">
+          <div class="text-4xl">📞</div>
+          <h3 class="mt-4 text-2xl font-bold">Contestadora con IA (IVR)</h3>
+          <p class="mt-2 opacity-85">Reconocimiento de voz, intención y enrutamiento. Transcripción y reportes de calidad.</p>
+          <ul class="mt-4 space-y-2 opacity-90 text-sm">
+            <li>• Voz → texto</li>
+            <li>• Integración Helpdesk</li>
+            <li>• Métricas SLA/CSAT</li>
+          </ul>
+        </div>
+        <div class="rounded-3xl soft-border p-8 bg-white/5 hover:bg-white/[0.08] transition fade-in">
+          <div class="text-4xl">🚀</div>
+          <h3 class="mt-4 text-2xl font-bold">Marketing con IA</h3>
+          <p class="mt-2 opacity-85">Creatividades, performance (Meta/TikTok/Google), tracking avanzado y CRO.</p>
+          <ul class="mt-4 space-y-2 opacity-90 text-sm">
+            <li>• Pixel + eventos</li>
+            <li>• A/B testing</li>
+            <li>• Dashboards ejecutivos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase: alternado editorial -->
+  <section id="showcase" class="py-12 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 space-y-12">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <img src="./assets/showcase-1.svg" alt="Bots WhatsApp" class="rounded-3xl soft-border fade-in">
+        <div class="fade-in">
+          <h3 class="text-2xl md:text-4xl font-extrabold">WhatsApp que vende</h3>
+          <p class="mt-3 opacity-85">Convertí conversaciones en ingresos: automations de bienvenida, recuperación, recomendaciones y cierre con pagos.</p>
+          <ul class="mt-4 space-y-2 opacity-90 text-sm">
+            <li>• Flujos conversacionales guiados</li>
+            <li>• Mensajería transaccional</li>
+            <li>• Seguimiento y re‑engagement</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 items-center md:flex-row-reverse">
+        <img src="./assets/showcase-2.svg" alt="IVR con IA" class="rounded-3xl soft-border fade-in md:order-2">
+        <div class="fade-in md:order-1">
+          <h3 class="text-2xl md:text-4xl font-extrabold">IVR que entiende</h3>
+          <p class="mt-3 opacity-85">Recibí llamadas con un agente de voz inteligente: capta intención, enruta, responde y registra.</p>
+          <ul class="mt-4 space-y-2 opacity-90 text-sm">
+            <li>• Speech‑to‑Text de alta precisión</li>
+            <li>• Integración Helpdesk/CRM</li>
+            <li>• KPIs de calidad en tiempo real</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <img src="./assets/showcase-3.svg" alt="Marketing con IA" class="rounded-3xl soft-border fade-in">
+        <div class="fade-in">
+          <h3 class="text-2xl md:text-4xl font-extrabold">Growth con IA</h3>
+          <p class="mt-3 opacity-85">Embudos de adquisición y retención. Creatividades asistidas por IA y optimización continua.</p>
+          <ul class="mt-4 space-y-2 opacity-90 text-sm">
+            <li>• Tracking server‑side y conversion API</li>
+            <li>• Auditorías de rendimiento</li>
+            <li>• Reporting ejecutivo semanal</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proceso en 4 pasos -->
+  <section id="proceso" class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-5xl font-extrabold fade-in">Proceso</h2>
+      <div class="grid md:grid-cols-4 gap-6 mt-10">
+        <div class="rounded-2xl soft-border p-6 fade-in">
+          <div class="text-2xl">1️⃣</div>
+          <h3 class="mt-2 font-semibold">Descubrimiento</h3>
+          <p class="opacity-80 text-sm mt-1">Objetivos, canales y KPIs.</p>
+        </div>
+        <div class="rounded-2xl soft-border p-6 fade-in">
+          <div class="text-2xl">2️⃣</div>
+          <h3 class="mt-2 font-semibold">Diseño</h3>
+          <p class="opacity-80 text-sm mt-1">Flujos, prompts y UX conversacional.</p>
+        </div>
+        <div class="rounded-2xl soft-border p-6 fade-in">
+          <div class="text-2xl">3️⃣</div>
+          <h3 class="mt-2 font-semibold">Implementación</h3>
+          <p class="opacity-80 text-sm mt-1">Integraciones, QA y seguridad.</p>
+        </div>
+        <div class="rounded-2xl soft-border p-6 fade-in">
+          <div class="text-2xl">4️⃣</div>
+          <h3 class="mt-2 font-semibold">Optimización</h3>
+          <p class="opacity-80 text-sm mt-1">Métricas, A/B y mejoras.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="rounded-3xl p-10 bg-white/5 soft-border flex flex-col md:flex-row items-center justify-between gap-6 fade-in">
+        <div>
+          <h3 class="text-2xl md:text-3xl font-extrabold">Llevemos tus conversaciones al próximo nivel</h3>
+          <p class="opacity-85 mt-2">Agenda una demo. Te mostramos flujos y resultados esperados.</p>
+        </div>
+        <a href="#contacto" class="rounded-xl px-6 py-3 bg-brand-gold text-black font-semibold shadow-glow hover:opacity-90">Agendar demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="rounded-3xl soft-border p-8 md:p-10 bg-white/[0.06] fade-in">
+        <h2 class="text-3xl md:text-4xl font-extrabold">Contacto</h2>
+        <p class="opacity-80 mt-2">Dejanos tu email y te contactamos en el día.</p>
+        <form id="lead-form" class="mt-6 grid md:grid-cols-[1fr_auto] gap-3">
+          <input type="email" name="email" placeholder="tu@email"
+            class="w-full rounded-xl bg-black/50 border soft-border px-4 py-3 outline-none focus:border-brand-gold" required>
+          <button class="rounded-xl px-6 py-3 bg-brand-gold text-black font-semibold hover:opacity-90">Enviar</button>
+        </form>
+        <p id="form-status" class="mt-3 text-sm opacity-80"></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="opacity-70 text-sm">© <span id="year"></span> DGLab.</p>
+      <div class="flex items-center gap-4 opacity-80">
+        <a href="https://wa.me/5490000000000" class="hover:text-brand-gold">WhatsApp</a>
+        <a href="#" class="hover:text-brand-gold">LinkedIn</a>
+        <a href="#" class="hover:text-brand-gold">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Reveal on scroll
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('appear'); obs.unobserve(e.target); } });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple form (demo) storing in localStorage
+    const form = document.getElementById('lead-form');
+    const status = document.getElementById('form-status');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const data = Object.fromEntries(new FormData(form));
+        const leads = JSON.parse(localStorage.getItem('dglab_leads') || '[]');
+        leads.push({ ...data, ts: new Date().toISOString() });
+        localStorage.setItem('dglab_leads', JSON.stringify(leads));
+        form.reset();
+        status.textContent = '¡Gracias! Te contactaremos a la brevedad.';
+      });
+    }
+  </script>
+</body>
+</html>
